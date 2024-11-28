@@ -22,11 +22,15 @@ dependencies {
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-hibernate-orm")
+
+    implementation("commons-validator:commons-validator:1.9.0")
+
+    testImplementation("io.quarkus:quarkus-junit5-mockito")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
 
-group = "com"
+group = "com.project"
 version = "0.0.0-SNAPSHOT"
 
 java {
