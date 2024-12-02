@@ -1,0 +1,19 @@
+quarkus:
+  application:
+    name: pet-sphere
+  http:
+    port: 8080
+  liquibase-mongodb:
+    migrate-at-start: false
+  mongodb:
+    database: pet-sphere
+    uuid-representation: STANDARD
+
+"%test":
+  quarkus:
+    liquibase-mongodb:
+      migrate-at-start: true
+      change-log-parameters:
+        include-test-data: "true"
+    mongodb:
+      database: test-pet-sphere

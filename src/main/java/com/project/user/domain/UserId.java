@@ -9,6 +9,10 @@ public record UserId(UUID id) {
     Objects.requireNonNull(id, "id must not be null");
   }
 
+  public static UserId of(String id) {
+    return new UserId(UUID.fromString(id));
+  }
+
   public UserId() {
     this(UUID.randomUUID());
   }

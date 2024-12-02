@@ -1,14 +1,14 @@
 package com.project.user.application;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
+
 import com.project.user.domain.User;
 import com.project.user.domain.UserEmail;
 import com.project.user.domain.UserId;
 import com.project.user.domain.ports.UserQueryPersistencePort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
 
 class SearchUseCaseTest {
 

@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="create-collection" author="andres">
+        <ext:createCollection collectionName="users">
+        </ext:createCollection>
+        <ext:insertOne collectionName="users">
+            <ext:document>{"_id": UUID("f52e1eb3-02c5-4910-b167-ddbbb7c640e9"), "name": "John Doe", "email":
+                "john.doe@example.com", "phone": "1234567890", "user-type": "PERSONAL", "created-at": new
+                ISODate("2024-04-01T11:12:13Z")}
+            </ext:document>
+        </ext:insertOne>
+    </changeSet>
+
+
+</databaseChangeLog>
