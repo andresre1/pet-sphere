@@ -17,4 +17,15 @@ class UserTest {
 
     assertEquals("name must not be null", exception.getMessage());
   }
+
+  @Test
+  void shouldThrowExceptionWhenPhoneIsNull() {
+    NullPointerException exception =
+            assertThrows(
+                    NullPointerException.class,
+                    () ->
+                            new User("andres", new UserEmail("andres@gmail.com"), null, UserType.PERSONAL));
+
+    assertEquals("phone must not be null", exception.getMessage());
+  }
 }
